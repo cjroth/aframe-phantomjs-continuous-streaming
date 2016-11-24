@@ -28,7 +28,9 @@ This is buggy! Here's the horrific list of bugs:
 
 1. Refreshing the browser breaks things. The streaming still technically works in that there are no errors, but the images no longer correctly load after the first time you connect to the stream. Maybe this is to do with trying to render a PNG starting mid-image?
 
-2. Only the first portion of the image is getting rendered in the browser. I've determined that this is definitely not a problem with Phantom because it outputs the entire image correctly when I direct it to write to png files. I suspect that the stream is somehow getting "chunked" into too small of "chunks". I'm not an expert at streams so any help with this would be highly appreciated.
+2. For larger images, only the first portion of the image is getting rendered in the browser. I've determined that this is definitely not a problem with Phantom because it outputs the entire image correctly when I direct it to write to png files. I suspect that the stream is somehow getting "chunked" into too small of "chunks". I'm not an expert at streams so any help with this would be highly appreciated.
+
+3. It is laggy.
 
 ## License
 

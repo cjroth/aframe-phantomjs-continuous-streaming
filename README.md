@@ -1,4 +1,4 @@
-## Use PhantomJS to continuously render a web page and stream the result as PNG binary data to the browser rendering it on a canvas.
+# Use PhantomJS to continuously render a web page and stream the result as PNG binary data to the browser rendering it on a canvas.
 
 This is a Node + PhantomJS project. I built it with Node v7.2.0 and PhantomJS v2.1.1 and tested it in Chrome v54. No guarantees that it will work in other versions.
 
@@ -26,3 +26,7 @@ This is buggy! Here's the horrific list of bugs:
 1. Refreshing the browser breaks things. The streaming still technically works in that there are no errors, but the images no longer correctly load after the first time you connect to the stream. Maybe this is to do with trying to render a PNG starting mid-image?
 
 2. Only the first portion of the image is getting rendered in the browser. I've determined that this is definitely not a problem with Phantom because it outputs the entire image correctly when I direct it to write to png files. I suspect that the stream is somehow getting "chunked" into too small of "chunks". I'm not an expert at streams so any help with this would be highly appreciated.
+
+## License
+
+[MIT Licensed](LICENSE)

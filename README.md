@@ -1,6 +1,6 @@
 # Use PhantomJS to continuously render a web page and stream the result as PNG binary data to the browser rendering it on a canvas.
 
-![Screenshot](/screenshot.gif "Use PhantomJS to continuously render a web page and stream the result as PNG binary data to the browser rendering it on a canvas.")
+![Screenshot](/public/animation.gif "Use PhantomJS to continuously render a web page and stream the result as PNG binary data to the browser rendering it on a canvas.")
 
 This is a Node + PhantomJS project. I built it with Node v7.2.0 and PhantomJS v2.1.1 and tested it in Chrome v54. No guarantees that it will work in other versions.
 

@@ -1,8 +1,8 @@
 var ws = window.packages['websocket-stream']('ws://localhost:8888', { binary: true })
 
 let canvas = document.querySelector('canvas')
-canvas.width = 300
-canvas.height = 225
+canvas.width = 307
+canvas.height = 230
 
 let context = canvas.getContext('2d')
 

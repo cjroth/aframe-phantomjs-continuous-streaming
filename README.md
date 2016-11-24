@@ -11,7 +11,9 @@ A lot of the ideas here were borrowed from Stef van den Ham's blog post on [Reco
 
 ## Install
 
-Run `npm install` or `yarn install`. This will automatically run `browserify public/packages.js > public/packages.combined.js` after it installs all of the Node dependencies - see `package.js`.
+First install PhantomJS with `npm install phantomjs -g` or `yarn global add phantomjs`. You can check if it's installed with `phantomjs -v`.
+
+Then run `npm install` or `yarn install`. This will automatically run `browserify public/packages.js > public/packages.combined.js` after it installs all of the Node dependencies - see `package.js`.
 
 ## Run
 

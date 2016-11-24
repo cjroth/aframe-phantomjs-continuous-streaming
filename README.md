@@ -1,5 +1,7 @@
 # Use PhantomJS to continuously render a web page and stream the result as PNG binary data to the browser rendering it on a canvas.
 
+![Screenshot](/screenshot.gif "Use PhantomJS to continuously render a web page and stream the result as PNG binary data to the browser rendering it on a canvas.")
+
 This is a Node + PhantomJS project. I built it with Node v7.2.0 and PhantomJS v2.1.1 and tested it in Chrome v54. No guarantees that it will work in other versions.
 
 The inspiration for this was to browse a web page inside an [Aframe](http://aframe.io) VR experience by loading the page in Phantom and relaying the result back to the browser and rendering it on a canvas and then forwarding click/keypress events to Phantom.
@@ -7,7 +9,6 @@ The inspiration for this was to browse a web page inside an [Aframe](http://afra
 A better way to do this might be to use ffmpeg instead of PNG streams, but I figured PNG Streams would be a simpler proof-of-concept. I could be wrong.
 
 A lot of the ideas here were borrowed from Stef van den Ham's blog post on [Recording A Website With PhantomJS And FFMPEG](http://mindthecode.com/recording-a-website-with-phantomjs-and-ffmpeg/).
-
 
 ## Install
 

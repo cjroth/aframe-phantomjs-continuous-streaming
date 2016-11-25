@@ -1,15 +1,23 @@
 const cp = require('child_process')
 const WebSocketServer = require('ws').Server
-const websocketStream = require('websocket-stream')
-const base64 = require('base64-stream')
 const express = require('express')
+const fs = require('fs')
+const sharp = require('sharp')
 
-let phantom = cp.spawn('phantomjs', ['runner.js'])
+// let phantom = cp.spawn('phantomjs', ['runner.js'])
 
 let wss = new WebSocketServer({ port: 8888 })
 wss.on('connection', function connect(ws) {
-  var stream = websocketStream(ws, { binary: true })
-  phantom.stdout.pipe(base64.encode()).pipe(stream)
+    fs.watch('out.png', (event, filename) => {
+        sharp('input.jpg')
+            .rotate()
+            .resize(200)
+            .toBuffer()
+            .then(data => {
+                ws.send(png, { binary: true })
+            })
+            // .catch( err => ... )
+    })
 })
 
 let app = express()

@@ -1,8 +1,7 @@
 var page = require('webpage').create()
-page.viewportSize = { width: 307, height: 230 }
-
-page.open('public/animation.gif', function () {
+// page.viewportSize = { width: 800, height: 600 }
+page.open('http://google.com', function () {
     setInterval(function() {
-        page.render('/dev/stdout', { format: 'png' })
-    }, 100)
+        page.render('out.png', { format: 'png', quality: 10 })
+    }, 1000)
 })

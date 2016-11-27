@@ -1,3 +1,19 @@
-<canvas></canvas>
-<script src="packages.combined.js"></script>
-<script src="main.js"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="packages.combined.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <canvas id="streamed-content" width="1440" height="900"></canvas>
+            </a-assets>
+            <a-video src="#streamed-content" width="16" height="9" position="0 0 -20"></a-video>
+            <a-sky color="#ECECEC"></a-sky>
+            <a-entity position="0 0 3.8">
+                <a-camera></a-camera>
+            </a-entity>
+        </a-scene>
+        <script src="main.js"></script>
+    </body>
+</html>

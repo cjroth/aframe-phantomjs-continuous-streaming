@@ -32,6 +32,13 @@ This is buggy! Here's the horrific list of bugs:
 
 3. It is laggy.
 
+## Related Reading
+
+- https://github.com/phoboslab/jsmpeg
+- http://mindthecode.com/recording-a-website-with-phantomjs-and-ffmpeg/
+- http://stackoverflow.com/questions/21921790/best-approach-to-real-time-http-streaming-to-html5-video-client
+- http://phoboslab.org/log/2013/09/html5-live-video-streaming-via-websockets
+
 ## License
 
 [MIT Licensed](LICENSE)

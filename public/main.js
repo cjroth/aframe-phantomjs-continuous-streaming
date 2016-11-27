@@ -1,16 +1,3 @@
-var ws = window.packages['websocket-stream']('ws://localhost:8888', { binary: true })
-
-let canvas = document.querySelector('canvas')
-canvas.width = 307
-canvas.height = 230
-
-let context = canvas.getContext('2d')
-
-ws.on('data', data => {
-    let image = new Image()
-    image.onload = () => {
-        context.clearRect(0, 0, canvas.width, canvas.height)
-        context.drawImage(image, 0, 0, canvas.width, canvas.height)
-    }
-    image.src = 'data:image/png;base64,' + data
-})
+let canvas = document.querySelector('#streamed-content')
+let client = new WebSocket('ws://localhost:8084/')
+let player = new jsmpeg(client, { canvas: canvas })

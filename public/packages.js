@@ -1,3 +1,6 @@
+const aframe = require('aframe')
+const jsmpeg = require('jsmpeg')
+
 window.packages = {
-    'websocket-stream': require('websocket-stream')
+    'jsmpeg': jsmpeg
 }

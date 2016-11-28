@@ -10,7 +10,7 @@
   "version": "1.0.0",
   "description": "Use PhantomJS to continuously render a web page and stream the result as PNG binary data to the browser rendering it on a canvas.",
   "main": "app.js",
-  "repository": "https://github.com/cjroth/phantomjs-continuous-streaming",
+  "repository": "https://github.com/cjroth/aframe-phantomjs-continuous-streaming",
   "author": "Chris Roth <chris@cjroth.com>",
   "license": "MIT",
   "scripts": {

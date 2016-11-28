@@ -1,1 +1,1 @@
-node jsmpeg/stream-server.js pw
+node stream-server.js pw

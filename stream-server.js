@@ -1,3 +1,5 @@
+// This file is borrowed
+
 
 if( process.argv.length < 3 ) {
 	console.log(
@@ -12,8 +14,8 @@ var STREAM_SECRET = process.argv[2],
 	WEBSOCKET_PORT = process.argv[4] || 8084,
 	STREAM_MAGIC_BYTES = 'jsmp'; // Must be 4 bytes
 
-var width = 320,
-	height = 240;
+var width = 1440,
+	height = 900;
 
 // Websocket Server
 var socketServer = new (require('ws').Server)({port: WEBSOCKET_PORT});
@@ -52,8 +54,8 @@ var streamServer = require('http').createServer( function(request, response) {
 	if( params[0] == STREAM_SECRET ) {
 		response.connection.setTimeout(0);
 
-		width = (params[1] || 320)|0;
-		height = (params[2] || 240)|0;
+		width = (params[1] || 1440)|0;
+		height = (params[2] || 900)|0;
 
 		console.log(
 			'Stream Connected: ' + request.socket.remoteAddress +

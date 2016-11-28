@@ -7,7 +7,4 @@ window.simulateEvent = (event) => {
         method: 'POST',
         body: JSON.stringify(event)
     })
-    .then(function(response) {
-        console.log('response', response)
-    })
 }

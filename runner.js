@@ -47,7 +47,7 @@ page.open(url, function(status) {
         page.render('/dev/stdout', { format: 'png' })
     }, 100)
 
-    log('listening on port 8888xx')
+    log('listening on port 8888')
 
     var server = webserver.create()
     var service = server.listen(8888, function(request, response) {

@@ -29,8 +29,8 @@ Then run `npm install` or `yarn install`. This will automatically run `browserif
 This is a little complex to run. You'll need to run:
 
 1. A static file server to host the Aframe scene. You can run this using `npm start` or `yarn start`. These are just shortcuts for `node app.js`. This will run on port 3000.
-2. A script that runs PhantomJS, pipes the rendered PNG output to ffmpeg, and then streams the mpeg output from that to a web socket server. I've put the command for this into a script, so you can just run `sh scripts/phantom-ffmpeg-stream.sh`.
-3. The web socket server that will stream our mpeg data to the browser. I've also put the command for this into a script so you can just run `sh scripts/start-streaming-server.sh`. This will run on port 8888.
+2. The web socket server that will stream our mpeg data to the browser, [adapted from jsmpeg](https://github.com/phoboslab/jsmpeg/blob/master/stream-server.js). I've also put the command for this into a script so you can just run `sh scripts/start-streaming-server.sh`. This listens for data from PhantomJS on port 8082 and then allows the browser to connect via a Websocket on port 8084. Once the browser connects, it will send all of the mpeg data to the browser.
+3. A script that runs PhantomJS, pipes the rendered PNG output to ffmpeg, and then streams the mpeg output from that to the server mentioned in step 2. I've put the command for this into a script, so you can just run `sh scripts/phantom-ffmpeg-stream.sh`.
 
 Navigate to `http://localhost:3000`. It will probably take a few seconds for streaming to start. If the 3D web page doesn't show up, try refreshing.
 

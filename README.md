@@ -20,7 +20,7 @@ Going forward I would like to look into [SlimerJS](https://slimerjs.org/) instea
 
 First install PhantomJS with `npm install phantomjs-prebuilt -g` or `yarn global add phantomjs-prebuilt`. You can check if it's installed with `phantomjs -v`.
 
-For Mac users, install ffmpeg with `brew install ffmpeg`. You can check if it's installed with `ffmpeg -v`. I'm not sure how you'd install ffmpeg on Windows or Linux, so you are on your own.
+For Mac users, install ffmpeg with `brew install ffmpeg`. You can check if it's installed with `ffmpeg -version`. I'm not sure how you'd install ffmpeg on Windows or Linux, so you are on your own.
 
 Then run `npm install` or `yarn install`. This will automatically run `browserify public/packages.js > public/packages.combined.js` after it installs all of the Node dependencies - see `package.js`.
 
